@@ -1,0 +1,18 @@
+- Colonization: 
+    - Colonization can only be done by a colony ship, which has a colonizing pop on it.
+    - Colonizing pop must be:
+        - Either removed from a planet in a star system the colony ship is on by removing the pop from the planet district and placing the it on to the colony ship.
+            - Reducing by that the empire's CG production value by 1.
+        - Or added to the colony ship directly using the populate action by placing the generated pop on to the colony ship
+        - This pop must be a blue CG pop
+        - This pop can not produce any resources
+    - To colonize a star system (no only a planet)
+        - Using a mobilization action: Move the colony ship into an explored star system
+        - Initiate Colonization on a planet the player wants to colonize.
+        - Roll two D6 dice and do the following:
+            - For 2 & 12: colonization fails and colony ship is damaged
+            - For 8: colonization fails + colony ship is undamaged
+            - For rest: colonization succeeds
+        - If colonization is successful:
+            - deploy the Pop in any available blue location on the planet surface.
+            - in case no matching districts in the whole star system, the player still deploy the pop but the pop must be transformed

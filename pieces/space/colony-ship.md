@@ -1,0 +1,6 @@
+- Colony ship is used to colonize planets in an explored star systems
+- Colony ship can not explore start systems
+- Colony ship is considered a civilian ship
+- Colony ship can carry one blue population
+- Colony ship be populated by a pop block, but only if in a star system belonging to its empire
+- Colony ship can not initiate a battle

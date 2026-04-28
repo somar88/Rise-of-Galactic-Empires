@@ -1,0 +1,16 @@
+- Space structures: 
+  - Space docks: [Star-Dock](star-dock.md) limit is calculated by the third of controlled star systems rounded up.
+  - Can only be built in a star system that contains a populated [IG](01---rough-notesboard-gamesrogesguideeconomyresources.md) district
+    - Price : 1 [CG](01---rough-notesboard-gamesrogesguideeconomyresources.md), 2 [IG](01---rough-notesboard-gamesrogesguideeconomyresources.md), 1 Eco
+      - Health: 5 [ooooo]
+      - Special Affect(s):
+        - Docked [Fleets](fleets.md) do not pay for maintenance
+        - [Production](../../rules/player-actions/production.md) of space units
+        - Production of space defense systems in its own system
+  - Theme/Lore Structures
+  - Mega Structures:
+    - Dyson Swarm
+    - Space Defense System - SDS
+    - Habitats
+    - Lore Mega structures
+  

@@ -1,0 +1,3 @@
+- Scout ship is used to explore new star systems
+- Scout ship can not initiate battles
+- Scout ship is considered a civilian ship

@@ -1,0 +1,6 @@
+# Exclude batch scripts (may contain credentials)
+*.bat
+
+# Obsidian workspace files
+.obsidian/
+*.base

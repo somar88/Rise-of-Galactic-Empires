@@ -1,0 +1,260 @@
+# RoGEs — Design Log
+
+A living record of key design decisions, the reasoning behind them, and any alternatives that were considered and rejected. Updated at the end of every work session.
+
+---
+
+## How to use this file
+
+Each entry follows this format:
+- **Decision** — what was decided
+- **Why** — the reasoning or concern that drove it
+- **Alternatives considered** — what was rejected and why
+
+---
+
+## Session 1–2 — Core Game Loop & Structure
+
+### Game loop: Action → Conflict → Draw, not fixed phases
+
+**Decision:** The round is not a fixed sequence of phases. Instead, it is a repeating cycle: one player plays a card (Action), any resulting conflict is resolved immediately (Conflict), then the next player acts. When all hands are empty, everyone draws back to hand size. When all decks are fully exhausted, a Maintenance phase triggers.
+
+**Why:** A fixed phase structure (everyone acts, then everyone conflicts) felt too sequential and slow. The interleaved loop keeps the game moving and makes each card play feel consequential immediately.
+
+**Alternatives considered:**
+- Draw after every card played → too frequent, disrupted pacing
+- Draw only at Maintenance → hands ran dry too fast
+
+---
+
+### Galaxy size: Ring 3 only, 2–4 players
+
+**Decision:** The galaxy is fixed at Ring 3 (37 hex tiles) for all player counts (2–4). No scaling to Ring 4.
+
+**Why:** Keeping the galaxy at Ring 3 maintains a consistent board feel and avoids the complexity of variable map sizes. Ring 4 was proposed for 4 players but rejected — the designer wanted a tighter, more contested galaxy regardless of player count.
+
+**Alternatives considered:**
+- Ring 4 for 4 players → rejected, too spread out
+
+---
+
+## Session 2 — Movement
+
+### Movement costs: destination ring number
+
+**Decision:** Crossing from one star system to another costs movement steps equal to the destination ring number (Ring 1 = 1 step, Ring 2 = 2 steps, Ring 3 = 3 steps). Moving within a hex's outer rim sections costs 1 step per section (6 sections per hex edge).
+
+**Why:** Creates a natural tension between the safety of inner rings and the cost of reaching outer systems. Fleets operating in the outer rim pay more per move, which rewards early expansion and punishes late pushes.
+
+---
+
+### Ship movement values: Scout 7, Fleet 5, Colony Ship 3
+
+**Decision:** Scout = 7 movement steps, Fleet = 5, Colony Ship = 3.
+
+**Why:** Initial values (Scout 6, Fleet 4, Colony Ship 2) were playtested and felt too slow — the designer felt the game would stagnate with units unable to cross the board in a reasonable number of turns. Values were bumped up one step across the board.
+
+**Alternatives considered:**
+- Scout 6 / Fleet 4 / Colony Ship 2 → rejected as too slow, risk of map stagnation
+
+---
+
+## Session 3 — Economy & Production
+
+### Production flow: Buffer → Stance → Storage
+
+**Decision:** When districts produce, all generated resources (CG, IG, Eco) go into a Production Buffer first. The player's current Economic Stance is then applied to the buffer (converting Eco into IG or CG, or leaving it unchanged). The final result moves into the Storage Area on the player tableau.
+
+**Why:** The buffer step gives players a clear moment to see what they produced before the stance conversion is applied, and makes the stance choice feel meaningful each maintenance cycle.
+
+---
+
+### Three Economic Stances
+
+**Decision:** Three stances — Militarization (converts Eco → IG), Growth (converts Eco → CG), Balanced (no conversion, everything stays as produced).
+
+**Why:** Gives players a strategic lever to shift their economy each maintenance cycle without requiring a separate action. The Balanced stance was added after the designer confirmed it was needed — "yes there is a balanced one so everything stays the same."
+
+---
+
+### Resources: CG, IG, Eco
+
+**Decision:** Three resource types: Consumer Goods (CG), Industrial Goods (IG), and Eco (Energy / Economic Power). Eco is the conversion currency affected by Economic Stance.
+
+**Why:** Separating consumer and industrial goods creates distinct production roles for districts (civilian vs military economy) while Eco acts as the flexible resource that players shape via their stance.
+
+---
+
+## Session 4 — Civilian Actions
+
+### Repair: half price, unlimited units per action
+
+**Decision:** Repairing a unit or building costs half the price of building a new one. A player can repair any number of units in a single Repair action.
+
+**Why:** Full price repair would make units disposable rather than worth maintaining. Allowing unlimited repairs per action means players don't need to spend multiple turns to recover from a battle — recovery should be meaningful but not a game-long slog.
+
+---
+
+### Build: 1 unit per action, at Star Dock
+
+**Decision:** The Build civilian action produces one unit per action, and must be performed at a Star Dock.
+
+**Why:** Limits snowballing — a player can't flood the board in a single turn. The Star Dock requirement means controlling key systems matters for military production.
+
+**Note:** Advanced Star Dock tech (Culture & Infrastructure research arc) will unlock building 2 or 3 units per action.
+
+---
+
+### Story Arc: 1 per civilian action
+
+**Decision:** A player may trigger one Story Arc event per civilian action.
+
+**Why:** Keeps Story Arcs meaningful without letting players chain multiple narrative events in one turn.
+
+---
+
+### Repair location: TBD (playtest)
+
+**Decision:** Where repairs can be performed (in-system only? anywhere?) is left unresolved pending playtesting. Marked 🧪 PLAYTEST in the rulebook.
+
+**Why:** Not enough data yet on whether location restrictions add interesting decisions or just slow the game down.
+
+---
+
+## Session 5 — Research System
+
+### Research: card-based decks, not a fixed tree
+
+**Decision:** Research is driven by four card decks (Culture & Infrastructure, Economy, Diplomacy, Military) rather than a branching tech tree on a board. Each deck contains Standard cards (single unlock) and Arc cards (multi-step, partial benefits at each step).
+
+**Why:** A fixed printed tech tree locks in the design and is hard to iterate. Card decks are modular — cards can be added, removed, or rebalanced without redesigning the board. Arc cards preserve the "tech tree" feel of progression without the rigidity.
+
+**Alternatives considered:**
+- Fixed tech tree grid on a board → rejected, too inflexible for a game still in design
+- Single research deck → rejected, wanted thematic separation between domains
+
+---
+
+### Research action: Discover then Develop, both optional
+
+**Decision:** The Research civilian action has two steps: Discover (draw one card from any deck into your Research Area) and Develop (fulfill one card's requirement to unlock it). Both steps are optional, but Discover always comes before Develop if both are taken.
+
+**Why:** Separating discovery from development means players invest in a pipeline — they don't immediately get what they research. The ordering ensures you can't develop something you just discovered in the same action.
+
+---
+
+### Four research deck categories
+
+**Decision:** Culture & Infrastructure (buildings, Star Dock, population), Economy (resources, trade, Eco conversion), Diplomacy (alliances, agreements, influence), Military / War (fleet combat, ship upgrades, FTL movement).
+
+**Why:** Mirrors the four major domains of the game. Players can specialize or diversify depending on their strategy.
+
+---
+
+## Session 6 — Trade & Diplomacy
+
+### Trade Agreements: token count = ½ players (rounded down)
+
+**Decision:** The number of Trade Agreement tokens available equals half the number of players, rounded down (2 players = 1 token, 3 players = 1 token, 4 players = 2 tokens).
+
+**Why:** Scarcity makes Trade Agreements meaningful choices rather than default behaviors. With few tokens, players must decide which relationships to formalize.
+
+---
+
+### Black Market: dynamic pricing, 20-unit capacity
+
+**Decision:** The Black Market has a maximum capacity of 20 units each for CG and IG. Prices shift based on how much stock is on the market. New prices take effect only when an Exchange action is completed (not mid-action).
+
+**Why:** Dynamic pricing creates a shared economic pressure — flooding the market drops prices, scarcity drives them up. The delayed price update (only after Exchange resolves) prevents mid-action price gaming.
+
+---
+
+### Trading: binding for resources, promissory is flexible
+
+**Decision:** Trade agreements involving resource or star system exchanges are binding. Promissory agreements (future favors, non-immediate) are not binding unless both parties explicitly agree otherwise.
+
+**Why:** Binding resource trades give the market stability and trust. Promissory notes being flexible allows for political dealmaking without rigid enforcement mechanics.
+
+---
+
+### What can be traded: almost anything
+
+**Decision:** There are no limits on what can be traded — resources, star systems, armies, fleets, and even renting of units are all valid trade subjects.
+
+**Why:** Open trading creates emergent diplomacy and complex deals. Restricting trade types would reduce political depth.
+
+---
+
+## Session 7 — Alliances
+
+### Two independent alliance types: Economic and War
+
+**Decision:** There are two distinct alliance types that are completely independent of each other — a player can have one, both, or neither with any given empire.
+
+- **Economic Alliance:** Bilateral (both parties must agree), requires adjacency to form, provides economic benefits.
+- **War Alliance:** Up to 3 players vs 1, not strictly bilateral, grants co-occupation rights in allied systems.
+
+**Why:** Separating economic and military alliances reflects real-world complexity — trading partners aren't always military allies. Keeping them independent avoids forced bundling and allows more nuanced diplomacy.
+
+**Alternatives considered:**
+- Single alliance type covering both → rejected, conflated too many different relationships
+- Threat agreements as alliances → rejected by designer: "A threat agreement is not an alliance"
+
+---
+
+### War Alliance: max 3v1
+
+**Decision:** A War Alliance can involve at most 3 players attacking 1. No more than 3 allied attackers against a single target.
+
+**Why:** Prevents complete pile-ons that would make the game feel unfair and eliminate any comeback potential for the defender.
+
+---
+
+## Session 8 — Conflict
+
+### Battle pauses the main game
+
+**Decision:** When a battle begins, the main game pauses for all players until the battle is fully resolved. No other actions take place while a battle is in progress.
+
+**Why:** The designer specifically requested this — "if the players other players are waiting for the main players to do something, the game should stop until the battle is done." Prevents situations where spectating players are taking actions while others are mid-battle.
+
+---
+
+## Session 9 — Repository
+
+### Repo structure: kebab-case, standard markdown links
+
+**Decision:** The GitHub repository uses kebab-case filenames (e.g. `space-battle.md`, `black-market.md`), standard markdown links instead of Obsidian `[[wiki links]]`, and a clean folder hierarchy (rules/, conflict/, economy/, pieces/, diplomacy/, world/, tech-tree/, archive/).
+
+**Why:** Obsidian wiki links only render in Obsidian. GitHub renders standard markdown. Kebab-case is the GitHub/web convention. The folder structure mirrors the game's conceptual domains.
+
+---
+
+### DESIGN-LOG.md: living document updated every session
+
+**Decision:** This file is updated at the end of every work session to capture any new decisions made.
+
+**Why:** Makes the repo fully self-contained — a Claude instance on any machine can read this file and understand not just what the rules say, but why they are the way they are.
+
+---
+
+## Open Design Questions (as of 2026-04-27)
+
+These are known unknowns — decisions not yet made:
+
+- **Space Battle rules** — frontline/defence line mechanics, turn order, hidden fleet cards
+- **Landing / Planet Fall** — carrier capacity, contested landings, Planetary Shield interaction
+- **Retreat rules** — when, where, interception
+- **Chaos Card system** — draw triggers, resolution timing, instant vs persistent, multi-card holding
+- **Tech Tree content** — actual card names, requirements, and effects for all four decks
+- **Recruit Ground Units** — location requirements, multi-unit per action
+- **Populate rules** — Green/Blue/Orange pop types, dual/omni district switching
+- **Maintenance costs** — exact costs per ship and district type
+- **Trade Agreement duration/cancellation** — how long it lasts, how it can be broken
+- **Black Market tracker** — physical component design
+- **Anomaly types** — specific effects, movement penalties, arc designs
+- **Moon and Giant Planet card properties**
+- **Nepiru golden districts count and Story Arc**
+- **FTL tech tiers** — upgrade levels and step bonuses
+- **Star Dock capacity upgrade** — which tech unlocks it, how many extra ships per action
+- **Repair location** — in-system only or anywhere? (🧪 PLAYTEST)
