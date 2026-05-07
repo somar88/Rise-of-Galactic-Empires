@@ -317,6 +317,21 @@ Each entry follows this format:
 
 ---
 
+### Trade Agreements: open-ended, free cancellation, 1 slot default with tech expansion
+
+**Decision:** Trade Agreements are open-ended with no fixed duration. Either player can cancel at any time at no action cost — both return their tokens immediately. Each empire starts with 1 Trade Agreement slot; additional slots unlocked via Economic tech. A physical token on each player's tableau marks the active agreement.
+
+**Why:** Open-ended agreements feel more like real diplomatic relationships. Free cancellation keeps diplomacy fluid. Starting at 1 slot forces a genuine choice about who your economic partner is early game, while tech expansion rewards investment in economic research.
+
+**Alternatives considered:**
+- Fixed duration (X rounds) → felt arbitrary, created awkward timing
+- No limit → removes the strategic choice entirely
+- Penalty for cancellation → too punishing, discourages diplomacy
+
+**New TODO:** Tech to increase Trade Agreement slots — Economic research deck.
+
+---
+
 ### Maintenance costs: per fleet, per solo ship, per planet with units/buildings
 
 **Decision:** Fleet away from owned/ally system: 1× CG + 1× IG. Solo ship not on a friendly planet: 1× IG per ship (playtest flag: may switch to Eco). Planet with ground units: 1× CG flat. Planet with ground buildings: 1× IG flat. Districts have no maintenance — their net production already reflects running costs. Can't pay → trade first, then skip and draw one Chaos Card per unpaid fleet/planet.
@@ -387,7 +402,7 @@ These are known unknowns — decisions not yet made:
   - Place more than one pop per Populate action
 - **Recruit Ground Units** — multi-unit per action? exact location requirements?
 - ~~**Maintenance costs**~~ ✅ Resolved (Session 10)
-- **Trade Agreement duration/cancellation** — how long it lasts, how it can be broken
+- ~~**Trade Agreement duration/cancellation**~~ ✅ Resolved (Session 10)
 - **Black Market tracker** — physical component design
 - **Anomaly types** — specific effects, movement penalties, arc designs
 - **Moon and Giant Planet card properties**
