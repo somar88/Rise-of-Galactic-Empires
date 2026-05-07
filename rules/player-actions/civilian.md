@@ -28,12 +28,27 @@ Civilian Action Card:
         I. Select a star system with at least one IG population district filled
         II. Pay for [Star dock](../../pieces/space/star-dock.md)
         III. Place the [Star dock](../../pieces/space/star-dock.md) token on the star system tile.
-    5. Recruit Ground unit(s):
-        I. on any number of star systems with at least one populated IG district
-        II. Recruit one ground unit per populated IG district in the star system
-            - Remove one pop from a CG district
-            - Pay the cost of the unit
-        III. place the unit(s) on any planet of that star system
+    5. Recruit Ground Unit(s):
+        Recruit ground units across any number of eligible star systems in a single action.
+
+        **Eligibility — a star system is eligible if it has:**
+        - At least one **populated IG district** (unlocks recruitment)
+        - At least one **CG pop** available to remove (if none, recruitment cannot proceed in that system)
+
+        **Per unit recruited:**
+        - Remove **1 CG pop** from any CG district in that system
+        - Pay the **unit's cost** in resources
+        - Unit must be **Tier I** — Tier II units cannot be recruited directly
+
+        **Recruitment cap per system:**
+        - Maximum units recruitable = number of **populated IG districts** in that system
+        - Example: 2 populated IG districts → max 2 units recruited from that system this action
+
+        **Unit types:** Any type may be recruited (Space Marines, Armored Vehicle, Mobile Artillery) — no restriction on mixing types within one action.
+
+        **Placement:** Place recruited units on any planet in their respective star system.
+
+        > 📋 **TODO (Tech Tree):** Design a tech that allows Tier II units to be recruited directly without the Upgrade action. Add to Military or Industrial research deck.
     6. Populate Planets:
         Place **one population token** on a planet you control.
 

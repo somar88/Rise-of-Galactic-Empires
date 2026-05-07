@@ -317,6 +317,26 @@ Each entry follows this format:
 
 ---
 
+### Maintenance costs: per fleet, per solo ship, per planet with units/buildings
+
+**Decision:** Fleet away from owned/ally system: 1× CG + 1× IG. Solo ship not on a friendly planet: 1× IG per ship (playtest flag: may switch to Eco). Planet with ground units: 1× CG flat. Planet with ground buildings: 1× IG flat. Districts have no maintenance — their net production already reflects running costs. Can't pay → trade first, then skip and draw one Chaos Card per unpaid fleet/planet.
+
+**Why:** Flat per-fleet and per-planet costs keep bookkeeping fast. CG for troops (they need supplies), IG for buildings (machines need fuel). No district maintenance avoids double-counting since district output already nets against consumption.
+
+**Playtest flag:** Solo ship cost IG vs Eco — test both.
+
+---
+
+### Recruit Ground Units: IG district cap, CG pop per unit, Tier I only
+
+**Decision:** Recruitment can happen across any number of star systems in one Civilian action. Each system requires at least one populated IG district (unlocks recruitment) and at least one CG pop (consumed per unit). Maximum units per system = number of populated IG districts. Any unit type may be recruited. Tier I only — Tier II requires the Upgrade action unless a tech changes this.
+
+**Why:** Tying the cap to populated IG districts makes industrial investment directly reward military output. Consuming a CG pop per unit creates a real tension between growing your population and building your army. Multi-system recruitment in one action keeps the civilian action feel expansive without needing multiple turns to build up.
+
+**New TODO:** Tech that unlocks direct Tier II recruitment — Military or Industrial research deck.
+
+---
+
 ### Landing: carrier capacity, shield break roll, defense fire sequence
 
 **Decision:** Each Carrier holds 3 points of ground unit cargo (stackable across multiple carriers). Space Marines and Marines Special Forces = size 1; Armored Vehicles, Advanced AVs, and Mobile Artillery = size 2. The same capacity applies to ground retreat boarding. Landing sequence: pre-abilities → Planetary Shield check (D6: 4–6 destroys it, 1–3 cancels landing) → all planetary defenses fire simultaneously (attacker assigns hits) → survivors land with damage → Ground Battle begins if any units survive. If no units survive defense fire, no Ground Battle.
@@ -358,6 +378,7 @@ Each entry follows this format:
 These are known unknowns — decisions not yet made:
 
 - ~~**Landing / Planet Fall**~~ ✅ Resolved (Session 10)
+- ~~**Recruit Ground Units**~~ ✅ Resolved (Session 10)
 - **Chaos Card system** — draw triggers, resolution timing, instant vs persistent, multi-card holding
 - **Tech Tree content** — actual card names, requirements, and effects for all four decks; including:
   - Interception of retreating fleets (Military deck)
@@ -365,7 +386,7 @@ These are known unknowns — decisions not yet made:
   - Repair ship action cost
   - Place more than one pop per Populate action
 - **Recruit Ground Units** — multi-unit per action? exact location requirements?
-- **Maintenance costs** — exact costs per ship and district type
+- ~~**Maintenance costs**~~ ✅ Resolved (Session 10)
 - **Trade Agreement duration/cancellation** — how long it lasts, how it can be broken
 - **Black Market tracker** — physical component design
 - **Anomaly types** — specific effects, movement penalties, arc designs
