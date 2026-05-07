@@ -317,6 +317,19 @@ Each entry follows this format:
 
 ---
 
+### Retreat Die: D12, 30% bad outcomes, flat 1 damage or Chaos Card
+
+**Decision:** The Retreat Die is a D12. Rolls 1–8 (67%) are no effect. Rolls 9–11 (25%) deal 1 damage to a ship of the retreating player's choice. Roll 12 (8%) triggers a Chaos Card draw. Total bad outcome chance: ~33%, targeting the 30% design goal. The same die is used for retreating into an empty discovered system and for each extra system jumped through on an extended retreat.
+
+**Why:** D12 gives the cleanest whole-number split near 30%. Flat 1 damage (rather than ship loss) keeps the penalty meaningful but not devastating — a punishing result that doesn't end a fleet. Player chooses the target ship to preserve agency. One Chaos Card face adds unpredictability without making the die feel purely mechanical.
+
+**Alternatives considered:**
+- D6 → couldn't hit 30% cleanly; too coarse
+- Instant ship loss → too punishing for a tactical retreat decision
+- Graduated faces (worse as number climbs) → adds complexity without much payoff
+
+---
+
 ### District Switching: during Populate action only; upgrade costs Eco, downgrade free
 
 **Decision:** A player may switch a district's color type as part of the Populate action (before placing the pop). Upgrade direction (CG→Eco, Eco→IG, CG→IG) costs 1× Eco per step. Downgrade is free. Existing pops of the old color are removed and returned to supply when switching. Switching can only happen during the Populate action.
@@ -346,5 +359,5 @@ These are known unknowns — decisions not yet made:
 - **FTL tech tiers** — upgrade levels and step bonuses
 - **Star Dock capacity upgrade** — which tech unlocks it, how many extra ships per action
 - **Repair location** — in-system only or anywhere? (🧪 PLAYTEST)
-- **Extended retreat penalty die** — define exact faces and damage values (🧪 PLAYTEST)
+- ~~**Extended retreat penalty die**~~ ✅ Resolved (Session 10)
 - **Colonization: pop transformation rule** — "if no matching districts in whole star system, pop must be transformed" — what does transformation cost/look like?

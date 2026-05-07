@@ -19,18 +19,28 @@ Retreating fleets must jump to a **valid destination system**:
 | Destination | Result |
 |---|---|
 | Adjacent system with an owned planet or War Ally's planet | ✅ Safe — no penalty |
-| Adjacent empty discovered system | ⚠️ Penalty — roll die: take damage or draw a Chaos Card (one face) |
+| Adjacent empty discovered system | ⚠️ Penalty — roll the Retreat Die |
 | Further than adjacent (default) | ❌ Not allowed |
 | Any undiscovered system | ❌ Never allowed |
+
+### The Retreat Die
+
+When a penalty roll is required, roll a **D12** and consult the table:
+
+| Roll | Result |
+|---|---|
+| 1–8 | ✅ No effect — clean escape |
+| 9–11 | 💥 One ship of your choice in the fleet takes **1 damage** |
+| 12 | 🃏 Draw a **Chaos Card** |
+
+The damaged ship is not destroyed unless it was already at 1 hit point. The player chooses which ship takes the damage.
 
 ### Extended Retreat Jumps
 By default, retreat is limited to **immediately adjacent** systems only.
 
-Extended jumps (beyond adjacent) may become possible through:
-- **Tech** — a researched ability that explicitly extends retreat range
-- **Die rolls** — for each additional system jumped through, roll the penalty die (same as the empty system rule above)
+Extended jumps (beyond adjacent) may become possible through **Tech** — a researched ability that explicitly extends retreat range. For each additional system jumped through beyond the first, roll the Retreat Die once.
 
-> 🧪 **PLAYTEST / TODO:** Finalise whether extended retreat jumps use tech, die rolls, or both. Define the exact die faces and damage values for the penalty roll.
+> 📋 **TODO (Tech Tree):** Design the tech that unlocks extended retreat jumps. Add to Military research deck.
 
 ### Interception
 By default, a retreating fleet **cannot be intercepted**.
