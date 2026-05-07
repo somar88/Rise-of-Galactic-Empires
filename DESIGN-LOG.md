@@ -317,6 +317,22 @@ Each entry follows this format:
 
 ---
 
+### Black Market tracker: dual sliding track, color-coded price bands
+
+**Decision:** Physical component is a dual sliding track board with two sections (2-player / 3+ player). Each section has two rows (CG and IG), numbered 0–20, with a sliding cube marking the current amount. Price bands are color-coded — Red (highest/scarce) → Orange → Yellow → Green (lowest/flooded) — for instant readability without scanning numbers. Prices lock during a transaction and only update after the Exchange action resolves.
+
+**Why:** Sliding cube is the simplest physical mechanism for a 0–20 range. Color coding removes the need to read numbers mid-game. Two-section board avoids needing a separate component for player count variants.
+
+---
+
+### Nepiru: 5 golden districts, 3-step branching Story Arc
+
+**Decision:** Nepiru has 5 Golden Districts producing at 2× output, fully automated (no pop tokens needed). The Story Arc activates on first capture — player chooses one of three paths (Excavation, Reactivation, Communion), each with 3 steps. One step advances per Maintenance Phase held. Completing all 3 steps coincides with the Moral Victory condition. On conquest, new owner inherits the arc at its current state; resetting to the branch point costs 1 step. Step 3 of Reactivation grants 3 free mechanized units (no Space Marines).
+
+**Why:** 5 districts at 2× makes Nepiru decisively powerful without being infinite. 3 steps rhymes with the 3 consecutive phases for Moral Victory — arc completion and win condition are the same moment. Branching paths give replayability. Inherited arc on conquest keeps the tension alive — you benefit from someone else's progress, or pay a cost to change direction.
+
+---
+
 ### Trade Agreements: open-ended, free cancellation, 1 slot default with tech expansion
 
 **Decision:** Trade Agreements are open-ended with no fixed duration. Either player can cancel at any time at no action cost — both return their tokens immediately. Each empire starts with 1 Trade Agreement slot; additional slots unlocked via Economic tech. A physical token on each player's tableau marks the active agreement.
@@ -403,10 +419,10 @@ These are known unknowns — decisions not yet made:
 - **Recruit Ground Units** — multi-unit per action? exact location requirements?
 - ~~**Maintenance costs**~~ ✅ Resolved (Session 10)
 - ~~**Trade Agreement duration/cancellation**~~ ✅ Resolved (Session 10)
-- **Black Market tracker** — physical component design
+- ~~**Black Market tracker**~~ ✅ Resolved (Session 10)
 - **Anomaly types** — specific effects, movement penalties, arc designs
 - **Moon and Giant Planet card properties**
-- **Nepiru golden districts count and Story Arc**
+- ~~**Nepiru golden districts count and Story Arc**~~ ✅ Resolved (Session 10)
 - **FTL tech tiers** — upgrade levels and step bonuses
 - **Star Dock capacity upgrade** — which tech unlocks it, how many extra ships per action
 - **Repair location** — in-system only or anywhere? (🧪 PLAYTEST)
