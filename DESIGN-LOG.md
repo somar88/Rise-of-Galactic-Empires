@@ -317,6 +317,21 @@ Each entry follows this format:
 
 ---
 
+### Landing: carrier capacity, shield break roll, defense fire sequence
+
+**Decision:** Each Carrier holds 3 points of ground unit cargo (stackable across multiple carriers). Space Marines and Marines Special Forces = size 1; Armored Vehicles, Advanced AVs, and Mobile Artillery = size 2. The same capacity applies to ground retreat boarding. Landing sequence: pre-abilities → Planetary Shield check (D6: 4–6 destroys it, 1–3 cancels landing) → all planetary defenses fire simultaneously (attacker assigns hits) → survivors land with damage → Ground Battle begins if any units survive. If no units survive defense fire, no Ground Battle.
+
+**Why:** Stacking capacity per carrier rewards fleet composition decisions. Size 1 for marines keeps them cheap to transport; size 2 for heavy units creates a real tradeoff. 50% shield break (D6 4–6) is the base — meaningful risk without making the shield feel unbreakable. Attacker assigns hits to preserve player agency under fire.
+
+**Alternatives considered:**
+- Fixed fleet capacity regardless of carrier count → removes carrier count as a meaningful decision
+- Defender assigns hits → too punishing, attacker has no agency
+- Automatic shield destruction with a hero present → no tension, just a checkbox
+
+**New TODO:** Tech upgrades for the shield-breaking roll (reroll, +1 bonus, auto-success) — Military research deck.
+
+---
+
 ### Retreat Die: D12, 30% bad outcomes, flat 1 damage or Chaos Card
 
 **Decision:** The Retreat Die is a D12. Rolls 1–8 (67%) are no effect. Rolls 9–11 (25%) deal 1 damage to a ship of the retreating player's choice. Roll 12 (8%) triggers a Chaos Card draw. Total bad outcome chance: ~33%, targeting the 30% design goal. The same die is used for retreating into an empty discovered system and for each extra system jumped through on an extended retreat.
@@ -342,7 +357,7 @@ Each entry follows this format:
 
 These are known unknowns — decisions not yet made:
 
-- **Landing / Planet Fall** — carrier capacity, contested landings, Planetary Shield interaction
+- ~~**Landing / Planet Fall**~~ ✅ Resolved (Session 10)
 - **Chaos Card system** — draw triggers, resolution timing, instant vs persistent, multi-card holding
 - **Tech Tree content** — actual card names, requirements, and effects for all four decks; including:
   - Interception of retreating fleets (Military deck)
