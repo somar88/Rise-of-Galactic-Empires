@@ -238,17 +238,105 @@ Each entry follows this format:
 
 ---
 
-## Open Design Questions (as of 2026-04-27)
+## Session 10 — Space Battle, Retreat, Population & Districts
+
+### Space Battle: three-line formation, always attacker-first
+
+**Decision:** Every fleet arranges across three lines on the Fleet Card — Frontline (all combat ships), Defensive Line ([Defensive]-tagged units and all non-combat ships), Reinforcement Line (reserves). The attacker always acts first unless a tech changes this. Damage flows Frontline → Defensive → Reinforcement; a line must be empty before the next takes any hits. [Arty] units can skip the sequence and target any line.
+
+**Why:** Three lines create tactical depth without complexity. Making damage flow sequential (rather than distributing freely) gives frontline ships real meaning. Arty as a line-skip exception creates a distinct role worth paying for.
+
+---
+
+### Space Battle: Prologue Phase (once, before Round I)
+
+**Decision:** Before battle rounds begin, the attacker may fire all available prologue abilities (from tech, special units, or empire passives). The defender may respond only with abilities whose card explicitly states they can be used as a defensive prologue response. War Alliance partners contribute on their respective sides. All prologue costs are per card (currently free during design phase).
+
+**Why:** The designer asked for a pre-battle ability window ("a prolog for the battle"). Making it attacker-first by default is consistent with the broader initiative rule. Defender responses are opt-in only to avoid a lengthy negotiation over "can I respond to this?"
+
+**Alternatives considered:**
+- Both sides fire prologue simultaneously → muddied initiative concept
+- Prologue for defender too by default → too much symmetry, lost the attacker advantage feel
+
+---
+
+### Space Battle: Battle Phase tokens I·+·II·+·III
+
+**Decision:** Each side uses a set of tokens: I · + · II · + · III. The + token marks the between-round window where players push reinforcements, repair ships act, and retreat/surrender can be declared. A fleet must have fought at least one full round before retreat can be declared.
+
+**Why:** Physical tokens make the round progression unambiguous during play. The + token explicitly represents the "breathing room" between rounds — a natural slot for all between-round decisions.
+
+---
+
+### Retreat: whole fleet, between-round only, adjacent systems only (default)
+
+**Decision:** Retreat can only be declared during a + (between-round) window, after at least one full round has been fought. The entire fleet retreats together — no partial retreats. By default, retreat is limited to immediately adjacent systems. Retreating into an adjacent owned/ally system is free; retreating into an adjacent empty discovered system incurs a penalty roll. Undiscovered systems are never valid.
+
+**Why:** "Between rounds" was the designer's explicit timing. Whole-fleet retreat avoids fiddly partial-fleet state. Adjacent-only is the safe default to playtest first.
+
+**Alternatives considered:**
+- Retreat at any time → breaks battle structure
+- Partial fleet retreat → logistically complex for components
+- Extended jumps freely → leaves retreat too safe
+
+**Open:** Extended retreat jumps via tech or die rolls (playtest TODO). Interception via future tech (Military deck TODO).
+
+---
+
+### Ground Retreat: requires carrier, player chooses who boards
+
+**Decision:** Ground units cannot retreat on their own. At least one Carrier must be present (or have survived) in the space theatre. The player chooses which units to board up to carrier capacity; units that don't board surrender and are lost. Ground retreat is declared independently from space retreat.
+
+**Why:** The designer specified carriers as the only escape vector. Player choice of which units to save adds a meaningful decision under pressure.
+
+---
+
+### Population: three colors — Blue (CG), Green (Eco), Orange (IG)
+
+**Decision:** Three pop token colors map directly to the three resource types: Blue = Consumer Goods (CG), Green = Ecological/Economy (Eco), Orange = Industrial Goods (IG).
+
+**Why:** Direct color-to-resource mapping makes the production indicator system visually intuitive.
+
+---
+
+### Districts: Small/Medium/Large sizes; Single/Dual/Omni token types
+
+**Decision:** Districts come in three sizes (Small=1 slot, Medium=2 slots, Large=3 slots) and three type tokens (Single-color, Dual two-color, Omni gold). A district produces nothing until fully filled. Filling the last slot triggers an immediate production indicator adjustment.
+
+**Why:** Partial districts not contributing until full creates a satisfying "district completion" moment and makes size a real decision. Dual and Omni districts create planet variety without needing many different token types.
+
+---
+
+### Populate action: one pop per action (default)
+
+**Decision:** The Populate action places exactly one population token per use. "A CG pop", "an Eco pop", "an IG pop" — singular. IG pops may only be placed when all CG and Eco district slots on the planet are already filled (with an exception for pure-IG planets). Eco district pops cost 1× CG (same as CG pops). IG pops cost 1× CG + 1× Eco.
+
+**Why:** "A/an" wording in the original design note confirmed singular. Limiting IG placement protects the resource ordering (CG and Eco fill first, industry comes after).
+
+**IDEA POOL:** Tech tree ability to place more than one pop per Populate action. Tier and cost TBD.
+
+---
+
+### District Switching: during Populate action only; upgrade costs Eco, downgrade free
+
+**Decision:** A player may switch a district's color type as part of the Populate action (before placing the pop). Upgrade direction (CG→Eco, Eco→IG, CG→IG) costs 1× Eco per step. Downgrade is free. Existing pops of the old color are removed and returned to supply when switching. Switching can only happen during the Populate action.
+
+**Why:** Restricting switching to the Populate action prevents it from becoming a free mid-round restructure. Eco cost for upgrades creates a meaningful spend. Free downgrade avoids punishing players who need to reset.
+
+---
+
+## Open Design Questions (as of 2026-05-07)
 
 These are known unknowns — decisions not yet made:
 
-- **Space Battle rules** — frontline/defence line mechanics, turn order, hidden fleet cards
 - **Landing / Planet Fall** — carrier capacity, contested landings, Planetary Shield interaction
-- **Retreat rules** — when, where, interception
 - **Chaos Card system** — draw triggers, resolution timing, instant vs persistent, multi-card holding
-- **Tech Tree content** — actual card names, requirements, and effects for all four decks
-- **Recruit Ground Units** — location requirements, multi-unit per action
-- **Populate rules** — Green/Blue/Orange pop types, dual/omni district switching
+- **Tech Tree content** — actual card names, requirements, and effects for all four decks; including:
+  - Interception of retreating fleets (Military deck)
+  - Extended retreat jump range beyond adjacent system
+  - Repair ship action cost
+  - Place more than one pop per Populate action
+- **Recruit Ground Units** — multi-unit per action? exact location requirements?
 - **Maintenance costs** — exact costs per ship and district type
 - **Trade Agreement duration/cancellation** — how long it lasts, how it can be broken
 - **Black Market tracker** — physical component design
@@ -258,3 +346,5 @@ These are known unknowns — decisions not yet made:
 - **FTL tech tiers** — upgrade levels and step bonuses
 - **Star Dock capacity upgrade** — which tech unlocks it, how many extra ships per action
 - **Repair location** — in-system only or anywhere? (🧪 PLAYTEST)
+- **Extended retreat penalty die** — define exact faces and damage values (🧪 PLAYTEST)
+- **Colonization: pop transformation rule** — "if no matching districts in whole star system, pop must be transformed" — what does transformation cost/look like?

@@ -35,12 +35,67 @@ Civilian Action Card:
             - Pay the cost of the unit
         III. place the unit(s) on any planet of that star system
     6. Populate Planets:
-        I.   Select a star system where you have a planet you control
-        II.  Select one planet which no one controls or on same planet
-        III. Pay 1x CG to add a CG Pop on it (if available)
-        IV.  Pay 1x CG to add a ECO Pop on it (if available)
-        V.   Only if all other districts are occupied: pay 1xCG + 1xEco to add an IG Pop to an Industrial district.
-            (*) if no other districts types are available on a planet surface you can directly add an IG Pop paying its costs normally.
+        Place **one population token** on a planet you control.
+
+        **Step 1 — Select a target**
+        - Choose a star system where you control at least one planet.
+        - Choose one planet in that system you control.
+
+        **Step 2 — Choose a district slot**
+        - Choose an available (unfilled) slot in any district on the planet surface.
+        - The district type determines which pop colors are accepted:
+
+        | District Token | Accepted Colors |
+        |---|---|
+        | Single-color token (Blue / Green / Orange) | That color only |
+        | Dual-color token | Either of the two colors shown |
+        | Omni token (Gold) | Any color (CG, Eco, or IG) |
+
+        **Step 3 — Pay and place**
+        Place exactly **one** pop token of an accepted color and pay its cost:
+
+        | Pop Color | Cost |
+        |---|---|
+        | CG (Blue) | 1× CG |
+        | Eco (Green) | 1× CG |
+        | IG (Orange) | 1× CG + 1× Eco — *only if all CG and Eco district slots on this planet are already filled* |
+
+        > **IG exception:** If a planet has no CG or Eco district slots at all (pure IG planet), IG pops may be placed normally without the restriction.
+
+        **Step 4 — Adjust production indicator**
+        If placing this pop **completes a district** (fills its last slot), immediately slide the empire's production indicator for that resource type up by the district's output value.
+
+        ---
+
+        **District Sizes**
+
+        | Size | Slots | Notes |
+        |---|---|---|
+        | Small | 1 | Fills immediately on first pop |
+        | Medium | 2 | Requires 2 pops to complete |
+        | Large | 3 | Requires 3 pops to complete |
+
+        Partial districts contribute nothing to production until fully filled.
+
+        ---
+
+        **Switching Districts (Optional — during this action)**
+
+        Before placing the pop, you may switch the color type of a district on the selected planet. This costs Eco to upgrade or nothing to downgrade:
+
+        | Switch | Cost |
+        |---|---|
+        | CG → Eco | 1× Eco |
+        | Eco → IG | 1× Eco |
+        | CG → IG | 2× Eco |
+        | Any downgrade (IG→Eco, Eco→CG, IG→CG) | Free |
+
+        - Switching applies to the **entire district**, not individual slots.
+        - Existing pops of the old color that are already placed in that district are **removed and returned to supply** when switching.
+        - You may switch and then place your pop in the same action.
+        - Switching can only be triggered during the Populate action.
+
+        > 🧪 **IDEA POOL / TODO:** Tech tree should include an ability that lets a player place more than one pop per Populate action. Define the cost and tier when designing the tech deck.
     7. Research:
         I.   Pay for tech.
         II.  Some tech need rare elements produced only be event cards
